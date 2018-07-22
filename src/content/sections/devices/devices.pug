@@ -1,5 +1,5 @@
 include ./../../components/section-title/section-title.pug
-include ./../../components/panel-big/panel-big.pug
+include ./../../components/panel/panel.pug
 include ./../../components/filter/filter.pug
 
 mixin devices
@@ -13,11 +13,12 @@ mixin devices
             { title: 'Включить свет в коридоре' },
             { title: 'Сделать пол тёплым во всей квартире' }
         ];
+        let filterItems = [ 'Все', 'Кухня', 'Зал', 'Лампочки', 'Камеры']
     .devices
         .devices-title
             +section-title("Избранные устройства")
-            +filter
+            +filter(filterItems)
         .devices-block
             .devices-list
                 each dPanel in dPanels
-                    +panel-big(dPanel)
+                    +panel(dPanel, big)

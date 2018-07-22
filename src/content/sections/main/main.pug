@@ -1,5 +1,5 @@
 include ./../../components/section-title/section-title.pug
-include ./../../components/panel-big/panel-big.pug
+include ./../../components/panel/panel.pug
 
 mixin main
     -
@@ -28,7 +28,7 @@ mixin main
             .oncoming
                 .oncoming-inner
                     each mPanel in mPanels
-                        +panel-big(mPanel)
+                        +panel(mPanel, true)
 
 
 

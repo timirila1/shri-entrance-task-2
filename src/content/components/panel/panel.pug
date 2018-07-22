@@ -1,5 +1,5 @@
-mixin panel(panel)
-    .panel
+mixin panel(panel, isBig)
+    .panel(class={"panel--big": isBig})
         .panel__icon иконка
         .panel__info
             .panel__title= panel.title

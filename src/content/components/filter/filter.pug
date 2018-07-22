@@ -1,12 +1,5 @@
-mixin filter
+mixin filter(list)
     ul.filter
-        li.filter__item.filter__item--active
-            a.filter__link(href="#") Все
-        li.filter__item
-            a.filter__link(href="#") Кухня
-        li.filter__item
-            a.filter__link(href="#") Зал
-        li.filter__item
-            a.filter__link(href="#") Лампочки
-        li.filter__item
-            a.filter__link(href="#") Камеры
+        each item, index in list
+            li.filter__item(class={"filter__item--active": index === 0})
+                a.filter__link(href="#")= item
