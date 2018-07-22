@@ -1,5 +1,6 @@
 include ./../../components/section-title/section-title.pug
 include ./../../components/panel-big/panel-big.pug
+include ./../../components/filter/filter.pug
 
 mixin devices
     -
@@ -15,6 +16,7 @@ mixin devices
     .devices
         .devices-title
             +section-title("Избранные устройства")
+            +filter
         .devices-block
             .devices-list
                 each dPanel in dPanels

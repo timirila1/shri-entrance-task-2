@@ -2,6 +2,13 @@
     grid-area: devices;
     margin-top: 30px;
     padding-left: 40px;
+    &-title {
+        display: grid;
+        grid-auto-flow: column;
+        align-items: center;
+        justify-content: start;
+        grid-column-gap: 13px;
+    }
     &-list {
         margin-top: 20px;
         overflow-x: auto;

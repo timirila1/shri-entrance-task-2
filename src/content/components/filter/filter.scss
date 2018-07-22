@@ -1,0 +1,26 @@
+.filter {
+    margin: 0;
+    padding: 0;
+    &__item {
+        display: inline-block;
+        margin-right: 10px;
+        font-family: Arial-BoldMT;
+        font-size: 13px;
+        color: #000000;
+        background: #F7F7F7;
+        border-radius: 20px;
+        line-height: 13px;
+        &:last-child {
+            margin-right: 0;
+        }
+        &--active {
+            background: #FFD93E;
+        }
+    }
+    &__link {
+        display: inline-block;
+        padding: 8px 15px;
+        color: inherit;
+        text-decoration: none;
+    }
+}
