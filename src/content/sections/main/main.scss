@@ -4,7 +4,7 @@
     padding-left: 40px;
     &-block {
         margin-top: 20px;
-        height: 331px;
+        height: 330px;
         border-radius: 22px;
         background-color: #ece8e4;
         background-image: url('images/bg@2x.png');
@@ -36,13 +36,22 @@
     &__label {
         font-size: 14px;
         color: #858585;
+        margin-bottom: 4px;
     }
     &__info {
         font-family: Arial-BoldMT;
         font-size: 36px;
     }
+    // &__icon {
+    //     display: inline;
+    // }
 }
 
 .oncoming {
     justify-self: end;
+    overflow: auto;
+    &-inner {
+        display: grid;
+        grid-row-gap: 15px;
+    }
 }

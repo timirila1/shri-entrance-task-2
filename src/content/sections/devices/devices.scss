@@ -1,3 +1,12 @@
 .devices {
     grid-area: devices;
+    margin-top: 30px;
+    padding-left: 40px;
+    &-list {
+        margin-top: 20px;
+        overflow-x: auto;
+        display: grid;
+        grid-auto-flow: column;
+        grid-gap: 15px;
+    }
 }

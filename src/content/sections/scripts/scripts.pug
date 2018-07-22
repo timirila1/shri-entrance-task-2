@@ -1,8 +1,24 @@
 include ./../../components/section-title/section-title.pug
+include ./../../components/panel/panel.pug
 
 mixin scripts
+    -
+        let sPanels = [
+            { title: 'Выключить весь свет в доме и во дворе' }, 
+            { title: 'Я ухожу' },
+            { title: 'Включить свет в коридоре' },
+            { title: 'Набрать горячую ванну', text: 'Начнётся в 18:00' },
+            { title: 'Включить свет в коридоре' },
+            { title: 'Включить свет в коридоре' },
+            { title: 'Сделать пол тёплым во всей квартире' }
+        ];
+    
     .scripts
         .scripts-title
             +section-title("Избранные сценарии")
         .scripts-block
+            .scripts-list
+                each sPanel in sPanels
+                    +panel(sPanel)
+
     

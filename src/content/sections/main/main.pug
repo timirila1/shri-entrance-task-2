@@ -2,6 +2,13 @@ include ./../../components/section-title/section-title.pug
 include ./../../components/panel-big/panel-big.pug
 
 mixin main
+    -
+        let mPanels = [
+            { title: 'Philips Cooler', text: 'Начнет охлаждать в 16:30' }, 
+            { title: 'Xiaomi Yeelight LED Smart Bulb', text: 'Включится в 17:00' },
+            { title: 'Xiaomi Yeelight LED Smart Bulb', text: 'Включится в 17:00' }
+        ];
+
     .main
         .main-title
             +section-title("Главное")
@@ -17,10 +24,11 @@ mixin main
                     .weather__item
                         .weather__label За окном
                         .weather__info +19
-                        //- .weather-item__icon
+                        //- .weather__icon иконка
             .oncoming
                 .oncoming-inner
-                    +panel-big
+                    each mPanel in mPanels
+                        +panel-big(mPanel)
 
 
 

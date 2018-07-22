@@ -1,3 +1,7 @@
-mixin panel-big
+mixin panel-big(panel)
     .panel-big
-        p панелька
+        .panel-big__icon иконка
+        .panel-big__info
+            .panel-big__title= panel.title
+            if panel.text
+                .panel-big__text= panel.text

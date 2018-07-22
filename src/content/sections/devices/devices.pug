@@ -1,8 +1,21 @@
 include ./../../components/section-title/section-title.pug
+include ./../../components/panel-big/panel-big.pug
 
 mixin devices
+    -
+        let dPanels = [
+            { title: 'Выключить весь свет в доме и во дворе' }, 
+            { title: 'Я ухожу' },
+            { title: 'Включить свет в коридоре' },
+            { title: 'Набрать горячую ванну', text: 'Начнётся в 18:00' },
+            { title: 'Включить свет в коридоре' },
+            { title: 'Включить свет в коридоре' },
+            { title: 'Сделать пол тёплым во всей квартире' }
+        ];
     .devices
         .devices-title
             +section-title("Избранные устройства")
         .devices-block
-    
+            .devices-list
+                each dPanel in dPanels
+                    +panel-big(dPanel)

@@ -1,7 +1,7 @@
 extends layout.pug
 
 include ./header/header.pug
-include ./content/content.pug
+include ./content/sections.pug
 include ./footer/footer.pug
 
 //- Todo Добавить фавиконку
@@ -12,5 +12,5 @@ block title
 block content
     .container
         +header
-        +content
+        +sections
         +footer
