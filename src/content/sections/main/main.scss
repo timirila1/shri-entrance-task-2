@@ -1,0 +1,48 @@
+.main {
+    grid-area: main;
+    margin-top: 30px;
+    padding-left: 40px;
+    &-block {
+        margin-top: 20px;
+        height: 331px;
+        border-radius: 22px;
+        background-color: #ece8e4;
+        background-image: url('images/bg@2x.png');
+        background-size: cover;
+        padding: 20px 20px 0 25px;
+        display: grid;
+        grid-auto-flow: column;
+    }
+}
+
+.welcome {
+    &__title {
+        font-family: Arial-BoldMT;
+        font-size: 27px;
+        margin: 6px 0;
+    }
+    &__text {
+        font-size: 14px;
+        margin-top: 0;
+        margin-bottom: 25px;
+    }
+}
+
+.weather {
+    &__item {
+        display: inline-block;
+        margin-right: 18px;
+    }
+    &__label {
+        font-size: 14px;
+        color: #858585;
+    }
+    &__info {
+        font-family: Arial-BoldMT;
+        font-size: 36px;
+    }
+}
+
+.oncoming {
+    justify-self: end;
+}

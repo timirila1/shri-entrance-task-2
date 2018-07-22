@@ -1,3 +1,9 @@
+// TODO разнести задачи по файлам
+// TODO посмотреть почему pug создает отдельный файл
+// TODO Сделать build 
+// TODO Сделать прод билд
+// TODO Прикрутить normalize.css через npm
+
 const gulp = require('gulp');
 const pug = require('gulp-pug');
 const sass = require('gulp-sass');
@@ -7,6 +13,7 @@ const autoprefixer = require('autoprefixer');
 const browserSync = require('browser-sync');
 const reload = browserSync.reload;
 const concat = require('gulp-concat');
+const svgSprite = require('gulp-svg-sprite');
 
 const postcssPlugins = [
     autoprefixer({
@@ -22,8 +29,8 @@ gulp.task('html', () => {
 
 gulp.task('sass', () => {
     gulp.src([
-            './src/**/*.scss',
-            './src/normalize.css'
+            './src/normalize.css',
+            './src/**/*.scss'
         ])
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
@@ -42,6 +49,20 @@ gulp.task('pug-watch', ['html'], () => {
 gulp.task("images", () => {
     gulp.src('./src/images/*.png')
         .pipe(gulp.dest('build/images'))
+
+    
+    // Todo доделать svg
+    const config = {
+        mode: {
+            symbol: {
+                sprite: "../sprite.svg"
+            }
+        }
+    };
+
+    gulp.src('./src/images/*.svg')
+        .pipe(svgSprite(config))
+        .pipe(gulp.dest('./build/images'));
 });
 
 gulp.task('default', ['sass', 'html', 'images'], () => {

@@ -1,2 +1,9 @@
+include ./sections/main/main.pug
+include ./sections/scripts/scripts.pug
+include ./sections/devices/devices.pug
+
 mixin content
-    h2 BODY
+    .content
+        +main
+        +scripts
+        +devices

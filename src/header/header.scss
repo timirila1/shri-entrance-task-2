@@ -1,16 +1,10 @@
 .header {
     display: grid;
-    height: 92px;
     border-bottom: 1px solid #F0F0F0;
-    padding: 0 40px;
+    padding: 0 36px 0 40px;
     grid-template-columns: 108px auto;
     grid-gap: 52px;
-    &__logo {
-        align-self: center;
-    }
-    &__menu {
-        align-self: center;
-    }
+    align-items: center;
 }
 
 .head-menu {
