@@ -1,10 +1,14 @@
-<!DOCTYPE html>
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title Yandex Task 2
-    body
-        p test
-        link(rel="stylesheet" href="./index.css")
+extends layout.pug
+
+include ./header/header.pug
+include ./content/content.pug
+include ./footer/footer.pug
+
+block title
+    title Yandex Task 2
+
+block content
+    .container
+        +header
+        +content
+        +footer
