@@ -3,6 +3,7 @@
 // TODO Сделать build 
 // TODO Сделать прод билд
 // TODO Прикрутить normalize.css через npm
+// TODO Убрать задний фон у свг
 
 const gulp = require('gulp');
 const pug = require('gulp-pug');
@@ -14,6 +15,8 @@ const browserSync = require('browser-sync');
 const reload = browserSync.reload;
 const concat = require('gulp-concat');
 const svgSprite = require('gulp-svg-sprite');
+const cheerio = require('gulp-cheerio');
+const replace = require('gulp-replace');
 
 const postcssPlugins = [
     autoprefixer({
@@ -61,6 +64,15 @@ gulp.task("images", () => {
     };
 
     gulp.src('./src/images/*.svg')
+        // .pipe(cheerio({
+        //     run: function ($) {
+		// 		$('[fill]').removeAttr('fill');
+		// 		$('[stroke]').removeAttr('stroke');
+		// 		$('[style]').removeAttr('style');
+		// 	},
+		// 	parserOptions: {xmlMode: true}
+        // }))
+        // .pipe(replace('&gt;', '>'))
         .pipe(svgSprite(config))
         .pipe(gulp.dest('./build/images'));
 });
