@@ -1,12 +1,13 @@
 include ./../../components/section-title/section-title.pug
 include ./../../components/panel/panel.pug
+include ./../../components/icon/icon.pug
 
 mixin main
     -
         let mPanels = [
             { title: 'Philips Cooler', text: 'Начнет охлаждать в 16:30', icon: 'icon_temperature' }, 
-            { title: 'Xiaomi Yeelight LED Smart Bulb', text: 'Включится в 17:00' },
-            { title: 'Xiaomi Yeelight LED Smart Bulb', text: 'Включится в 17:00' }
+            { title: 'Xiaomi Yeelight LED Smart Bulb', text: 'Включится в 17:00', icon: 'icon_sun' },
+            { title: 'Xiaomi Yeelight LED Smart Bulb', text: 'Включится в 17:00', icon: 'icon_sun' }
         ];
 
     .main
@@ -24,7 +25,8 @@ mixin main
                     .weather__item
                         .weather__label За окном
                         .weather__info +19
-                        //- .weather__icon иконка
+                        .weather__icon
+                            +icon('cloud-drizzle', 'weather')
             .oncoming
                 .oncoming-inner
                     each mPanel in mPanels

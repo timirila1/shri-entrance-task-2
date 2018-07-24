@@ -5,13 +5,13 @@ include ./../../components/filter/filter.pug
 mixin devices
     -
         let dPanels = [
-            { title: 'Выключить весь свет в доме и во дворе' }, 
-            { title: 'Я ухожу' },
-            { title: 'Включить свет в коридоре' },
-            { title: 'Набрать горячую ванну', text: 'Начнётся в 18:00' },
-            { title: 'Включить свет в коридоре' },
-            { title: 'Включить свет в коридоре' },
-            { title: 'Сделать пол тёплым во всей квартире' }
+            { title: 'Xiaomi Yeelight LED Smart Bulb', text: 'Включено', icon: 'icon_sun_2' }, 
+            { title: 'D-Link Omna 180 Cam', text: 'Включится в 17:00', icon: 'icon_sun' },
+            { title: 'Elgato Eve Degree Connected', text: 'Выключено до 17:00', icon: 'icon_temperature' },
+            { title: 'LIFX Mini Day & Dusk A60 E27', text: 'Включится в 17:00', icon: 'icon_sun' },
+            { title: 'Xiaomi Mi Air Purifier 2S', text: 'Включено', icon: 'icon_sun_2' },
+            { title: 'Philips Zhirui', text: 'Выключено', icon: 'icon_sun' },
+            { title: 'Xiaomi Mi Air Purifier 2S', text: 'Включено', icon: 'icon_sun_2' }
         ];
         let filterItems = [ 'Все', 'Кухня', 'Зал', 'Лампочки', 'Камеры']
     .devices
@@ -21,4 +21,4 @@ mixin devices
         .devices-block
             .devices-list
                 each dPanel in dPanels
-                    +panel(dPanel, big)
+                    +panel(dPanel, true)

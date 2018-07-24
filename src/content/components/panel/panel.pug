@@ -2,8 +2,8 @@ include ./../icon/icon.pug
 
 mixin panel(panel, isBig)
     .panel(class={"panel--big": isBig})
-        if panel.text
-            .panel__icon
+        .panel__icon
+            if panel.icon
                 +icon(panel.icon, 'default')
         .panel__info
             .panel__title= panel.title

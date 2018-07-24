@@ -53,26 +53,11 @@ gulp.task("images", () => {
     gulp.src('./src/images/*.png')
         .pipe(gulp.dest('build/images'))
 
-    
-    // Todo доделать svg
-    const config = {
-        mode: {
-            symbol: {
-                sprite: "../sprite.svg"
-            }
-        }
+    const config = { 
+        mode: { symbol: { sprite: "../sprite.svg" }}
     };
 
     gulp.src('./src/images/*.svg')
-        // .pipe(cheerio({
-        //     run: function ($) {
-		// 		$('[fill]').removeAttr('fill');
-		// 		$('[stroke]').removeAttr('stroke');
-		// 		$('[style]').removeAttr('style');
-		// 	},
-		// 	parserOptions: {xmlMode: true}
-        // }))
-        // .pipe(replace('&gt;', '>'))
         .pipe(svgSprite(config))
         .pipe(gulp.dest('./build/images'));
 });

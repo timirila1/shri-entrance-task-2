@@ -4,13 +4,11 @@ include ./../../components/panel/panel.pug
 mixin scripts
     -
         let sPanels = [
-            { title: 'Выключить весь свет в доме и во дворе' }, 
-            { title: 'Я ухожу' },
-            { title: 'Включить свет в коридоре' },
-            { title: 'Набрать горячую ванну', text: 'Начнётся в 18:00' },
-            { title: 'Включить свет в коридоре' },
-            { title: 'Включить свет в коридоре' },
-            { title: 'Сделать пол тёплым во всей квартире' }
+            { title: 'Выключить весь свет в доме и во дворе', icon: 'icon_sun_2' }, 
+            { title: 'Я ухожу', icon: 'icon_scheduled'},
+            { title: 'Включить свет в коридоре', icon: 'icon_sun_2' },
+            { title: 'Набрать горячую ванну', text: 'Начнётся в 18:00', icon: 'icon_temperature_2' },
+            { title: 'Сделать пол тёплым во всей квартире', icon: 'icon_temperature_2' }
         ];
     
     .scripts
@@ -19,6 +17,6 @@ mixin scripts
         .scripts-block
             .scripts-list
                 each sPanel in sPanels
-                    +panel(sPanel)
+                    +panel(sPanel, false)
 
     

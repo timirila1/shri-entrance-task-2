@@ -29,9 +29,12 @@
 }
 
 .weather {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
     &__item {
         display: inline-block;
-        margin-right: 18px;
+        margin-right: 13px;
     }
     &__label {
         font-size: 14px;
@@ -39,12 +42,20 @@
         margin-bottom: 4px;
     }
     &__info {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 5px;
         font-family: Arial-BoldMT;
         font-size: 36px;
     }
-    // &__icon {
-    //     display: inline;
-    // }
+    &__icon {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .icon--weather {
+        height: 26px;
+        width: 26px;
+    }
 }
 
 .oncoming {
