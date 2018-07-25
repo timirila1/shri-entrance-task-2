@@ -6,11 +6,20 @@
     grid-template-columns: 108px auto;
     grid-gap: 52px;
     align-items: center;
+    @media screen and (max-width: 1024px) {
+        border-bottom: none;
+        padding: 0 20px;
+        grid-gap: 0;
+    }
 }
 
 .head-menu {
     margin: 0;
     padding: 0;
+    @media screen and (max-width: 1024px) {
+        justify-self: end;
+    }
+    
     &__item {
         display: inline-block;
         margin-right: 28px;
@@ -34,8 +43,7 @@
     }
 }
 
-.head-logo {
-    &__image {
-        width: 100%;
-    }
+.icon--logo {
+    width: 111px;
+    height: 38px;
 }

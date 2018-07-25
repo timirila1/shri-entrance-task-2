@@ -1,9 +1,11 @@
-//- Todo: поменять лого на svg
+include ./../content/components/icon/icon.pug
+
+
 mixin header
     .header
         .header__logo 
             a(href="#")
-                img.head-logo__image(src="images/logo2x.png")
+                +icon('logo-home', 'logo')
         ul.header__menu.head-menu
             li.head-menu__item.head-menu__item--active
                 a.head-menu__link(href="#") Сводка
