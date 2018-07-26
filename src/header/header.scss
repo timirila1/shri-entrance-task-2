@@ -22,9 +22,13 @@
     &--list {
         @media screen and (max-width: 1024px) {
             display: none;
-        }   
+        }
     }
     &--icon {
+        display: none;
+        @media screen and (max-width: 1024px) {
+            display: block;
+        }
         .icon--nav {
             width: 16px;
             height: 14px;
