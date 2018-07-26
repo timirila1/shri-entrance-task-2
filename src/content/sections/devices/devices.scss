@@ -2,6 +2,13 @@
     grid-area: devices;
     margin-top: 30px;
     padding-left: 40px;
+    @media screen and (max-width: 1024px) {
+        padding-left: 20px;
+        margin-top: 24px;
+    }
+    &-block {
+        display: grid;
+    }
     &-title {
         display: grid;
         grid-auto-flow: column;
