@@ -18,6 +18,7 @@
         grid-auto-flow: column;
         @media screen and (max-width: 1024px) {
             margin-top: 0;
+            padding: 20px 20px 0 20px;
         }
     }
     &-title {
@@ -32,11 +33,19 @@
         font-family: Arial-BoldMT;
         font-size: 27px;
         margin: 6px 0;
+        @media screen and (max-width: 1024px) {
+            font-size: 18px;
+            margin: 0 0 5px;
+        }
     }
     &__text {
         font-size: 14px;
         margin-top: 0;
         margin-bottom: 25px;
+        @media screen and (max-width: 1024px) {
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
     }
 }
 
@@ -51,7 +60,10 @@
     &__label {
         font-size: 14px;
         color: #858585;
-        margin-bottom: 4px;
+        margin-bottom: 5px;
+        @media screen and (max-width: 1024px) {
+            font-size: 12px;
+        }
     }
     &__info {
         display: inline-block;
@@ -59,6 +71,9 @@
         margin-right: 5px;
         font-family: Arial-BoldMT;
         font-size: 36px;
+        @media screen and (max-width: 1024px) {
+            font-size: 24px;
+        }
     }
     &__icon {
         display: inline-block;
@@ -67,6 +82,10 @@
     .icon--weather {
         height: 26px;
         width: 26px;
+        @media screen and (max-width: 1024px) {
+            height: 17px;
+            width: 17px;
+        }
     }
 }
 
