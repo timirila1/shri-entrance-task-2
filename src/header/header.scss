@@ -19,6 +19,17 @@
     @media screen and (max-width: 1024px) {
         justify-self: end;
     }
+    &--list {
+        @media screen and (max-width: 1024px) {
+            display: none;
+        }   
+    }
+    &--icon {
+        .icon--nav {
+            width: 16px;
+            height: 14px;
+        }
+    }
     
     &__item {
         display: inline-block;

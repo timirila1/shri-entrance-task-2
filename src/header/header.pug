@@ -6,11 +6,14 @@ mixin header
         .header__logo 
             a(href="#")
                 +icon('logo-home', 'logo')
-        ul.header__menu.head-menu
-            li.head-menu__item.head-menu__item--active
-                a.head-menu__link(href="#") Сводка
-            li.head-menu__item
-                a.head-menu__link(href="#") Устройства
-            li.head-menu__item
-                a.head-menu__link(href="#") Сценарии
+        .header__menu.head-menu
+            .head-menu--list
+                li.head-menu__item.head-menu__item--active
+                    a.head-menu__link(href="#") Сводка
+                li.head-menu__item
+                    a.head-menu__link(href="#") Устройства
+                li.head-menu__item
+                    a.head-menu__link(href="#") Сценарии
+            .head-menu--icon
+                +icon('icon_list_m@1x', 'nav')
         
