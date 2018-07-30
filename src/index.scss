@@ -19,6 +19,6 @@ body {
     grid-template-rows: 92px auto 61px;
     align-items: start;
     @media screen and (max-width: 1024px) {
-        grid-template-rows: 64px auto 61px;
+        grid-template-rows: 64px auto auto;
     }
 }

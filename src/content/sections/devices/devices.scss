@@ -23,5 +23,8 @@
         display: grid;
         grid-auto-flow: column;
         grid-gap: 15px;
+        @media screen and (max-width: 1024px) {
+            margin-top: 17px;
+        }
     }
 }
